@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+  border-bottom: 1px solid gray;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+p {
+  margin: 1em;
+}
+
+.pic1 {
+  grid-area: big;
+}
+
+.pic2 {
+  grid-area: small1;
+}
+
+.pic3 {
+  grid-area: small2;
+}
+
+.pic4 {
+  grid-area: small3;
+}
+
+.pic5 {
+  grid-area: small4;
+}
+
+.pic6 {
+  grid-area: small5;
+}
+
+.pic7 {
+  grid-area: small6;
+}
+
+.pic8 {
+  grid-area: small7;
+}
+
+.pic9 {
+  grid-area: small8;
+}
+
+.pic10 {
+  grid-area: big1;
+}
+.top-grid-container {
+  display: grid;
+  grid-template-areas:
+    "big big small1 small2"
+    "big big small3 small4";
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.middle-grid-container {
+  display: grid;
+  grid-template-areas:
+    "small5 small6 big1 big1"
+    "small7 small8 big1 big1";
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.bottom-grid-container {
+  display: grid;
+  grid-template-areas:
+    "big big small1 small2"
+    "big big small3 small4";
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+.body > div {
+  background-color: aquamarine;
+  height: auto;
+  min-height: 10em;
+}
+
+main img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  transition: 0.2s;
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 5px;
+}
+
+main img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    display: grid;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  P {
+    text-align: center;
+  }
+
+  .top-grid-container {
+    grid-template-areas:
+      "big big"
+      "big big"
+      "small1 small2"
+      "small3 small4";
+    height: auto;
+  }
+
+  .middle-grid-container {
+    grid-template-areas:
+      "small5 small6"
+      "small7 small8"
+      "big1 big1"
+      "big1 big1";
+    height: auto;
+  }
+
+  .bottom-grid-container {
+    grid-template-areas:
+      "big big"
+      "big big"
+      "small1 small2"
+      "small3 small4";
+    height: auto;
+  }
+}
